@@ -5,18 +5,17 @@ import java.util.Scanner;
 public class J03007 {
     public static boolean checkN (String line){
         int n = line.length();
+        long sum = 0;
         for (int i = 0; i < n/2; i++){
-            if (line.charAt(i) != line.charAt(n-1-i)
-                    || (line.charAt(i)) == '1'
-                    || (line.charAt(i)) == '4'
-                    || (line.charAt(i)) == '6'
-                    || (line.charAt(i)) == '8'
-                    || (line.charAt(i)) == '9'
-            ){
-                return false;
-            }
+            if (line.charAt(i) != line.charAt(n-i-1)) return false;
         }
-        return true;
+
+        if (line.charAt(0) != '8' || line.charAt(n-1) != '8') return false;
+
+        for (int i = 0; i < n; i++){
+            sum += line.charAt(i) - '0';
+        }
+        return sum % 10 == 0;
     }
 
     public static void main(String[] args) {

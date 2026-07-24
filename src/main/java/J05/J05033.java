@@ -5,24 +5,21 @@ import java.util.List;
 import java.util.Scanner;
 
 public class J05033 {
-    static int stt = 1;
+    static class ThoiGian {
+        int gio, phut, giay;
+        String soSanh;
 
-    static class DoanhNghiep{
-        String ma, ten, lop, email, dn;
-        int id;
+        public ThoiGian(int gio, int phut, int giay) {
+            this.gio = gio;
+            this.phut = phut;
+            this.giay = giay;
 
-        public DoanhNghiep(String ma, String ten, String lop, String email, String dn) {
-            this.ma = ma;
-            this.ten = ten;
-            this.lop = lop;
-            this.email = email;
-            this.dn = dn;
-            this.id = stt++;
+            this.soSanh = String.format("%02d%02d%02d", gio, phut, giay);
         }
 
         @Override
         public String toString(){
-            return id+" "+ma+" "+ten+" "+lop+" "+email+" "+dn;
+            return gio+" "+phut+" "+giay;
         }
     }
 
@@ -32,28 +29,22 @@ public class J05033 {
         int t = sc.nextInt();
         sc.nextLine();
 
-        List<DoanhNghiep> list = new ArrayList<>();
+        List<ThoiGian> list = new ArrayList<>();
 
-        while (t-- > 0){
-            list.add(new DoanhNghiep(
-                    sc.nextLine(), sc.nextLine(), sc.nextLine(), sc.nextLine(), sc.nextLine()
+        while (t-- > 0) {
+            list.add(new ThoiGian(
+                    sc.nextInt(), sc.nextInt(), sc.nextInt()
             ));
         }
 
         list.sort((a, b) -> {
-            return a.ten.compareTo(b.ten);
+            return a.soSanh.compareTo(b.soSanh);
         });
 
-        int q = sc.nextInt();
-        sc.nextLine();
-
-        while (q-- > 0){
-            String search = sc.nextLine();
-
-            for (DoanhNghiep item : list){
-                if (item.dn.equals(search)) System.out.println(item);
-            }
+        for (ThoiGian item : list) {
+            System.out.println(item);
         }
+
 
     }
 }
