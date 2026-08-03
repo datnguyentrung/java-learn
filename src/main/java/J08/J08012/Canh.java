@@ -1,4 +1,4 @@
-package J08012;
+package J08.J08012;
 
 public class Canh {
     int c, count;

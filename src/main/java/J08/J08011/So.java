@@ -1,4 +1,4 @@
-package J08011;
+package J08.J08011;
 
 
 public class So implements Comparable<So>{
