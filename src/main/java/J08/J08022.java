@@ -10,19 +10,15 @@ public class J08022 {
         int n = a.length;
         int[] res = new int[n];
 
-        Stack<Integer> st = new Stack<>();
+        int[] st = new int[n];
+        int top = -1;
         for (int i = n - 1; i >= 0; i--) {
-            while (!st.isEmpty() && st.peek() <= a[i]) {
-                st.pop();
+            while (top >= 0 && st[top] <= a[i]) {
+                top--;
             }
 
-            if (st.isEmpty()) {
-                res[i] = -1;
-            } else {
-                res[i] = st.peek();
-            }
-
-            st.push(a[i]);
+            res[i] = top < 0 ? -1 : st[top];
+            st[++top] = a[i];
         }
 
         for (int x : res) System.out.print(x +" ");

@@ -29,12 +29,29 @@ public class J05065 { // BẢNG THU NHẬP GIÁO VIÊN
 
         List<NhanVien> list = new ArrayList<>();
 
+        int GD = 1, TP = 3, PP = 3;
+
         while(t-->0){
             String[] line = sc.nextLine().trim().split("\\s+");
 
             StringBuilder sb = new StringBuilder();
             for (int i = 1; i < line.length; i++){
                 sb.append(line[i]).append(" ");
+            }
+
+            if (line[0].startsWith("GD")) {
+                if (GD == 0) line[0] = "NV" + line[0].substring(2);
+                else GD--;
+            }
+
+            if (line[0].startsWith("TP")) {
+                if (TP == 0) line[0] = "NV" + line[0].substring(2);
+                else TP--;
+            }
+
+            if (line[0].startsWith("PP")) {
+                if (PP == 0) line[0] = "NV" + line[0].substring(2);
+                else PP--;
             }
 
             list.add( new NhanVien(
