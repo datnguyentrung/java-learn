@@ -3,7 +3,7 @@ package RMI;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
-public class Object {
+public class Object1 {
     public static void main(String[] args) throws Exception{
         String sCode = "B23DCCN142";
         String qCode = "c3JDbhYH";
