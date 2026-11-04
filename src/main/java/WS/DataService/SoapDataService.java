@@ -1,5 +1,5 @@
 
-package WS;
+package WS.DataService;
 
 import java.util.List;
 import javax.jws.WebMethod;
@@ -32,8 +32,8 @@ public interface SoapDataService {
      * @param qCode
      */
     @WebMethod
-    @RequestWrapper(localName = "submitDataStringArray", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.SubmitDataStringArray")
-    @ResponseWrapper(localName = "submitDataStringArrayResponse", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.SubmitDataStringArrayResponse")
+    @RequestWrapper(localName = "submitDataStringArray", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.DataService.SubmitDataStringArray")
+    @ResponseWrapper(localName = "submitDataStringArrayResponse", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.DataService.SubmitDataStringArrayResponse")
     @Action(input = "http://soap.server.network.judge.dblab.ptit/SoapDataService/submitDataStringArrayRequest", output = "http://soap.server.network.judge.dblab.ptit/SoapDataService/submitDataStringArrayResponse")
     public void submitDataStringArray(
         @WebParam(name = "studentCode", targetNamespace = "")
@@ -52,8 +52,8 @@ public interface SoapDataService {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getDataDouble", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.GetDataDouble")
-    @ResponseWrapper(localName = "getDataDoubleResponse", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.GetDataDoubleResponse")
+    @RequestWrapper(localName = "getDataDouble", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.DataService.GetDataDouble")
+    @ResponseWrapper(localName = "getDataDoubleResponse", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.DataService.GetDataDoubleResponse")
     @Action(input = "http://soap.server.network.judge.dblab.ptit/SoapDataService/getDataDoubleRequest", output = "http://soap.server.network.judge.dblab.ptit/SoapDataService/getDataDoubleResponse")
     public double getDataDouble(
         @WebParam(name = "studentCode", targetNamespace = "")
@@ -68,8 +68,8 @@ public interface SoapDataService {
      * @param qCode
      */
     @WebMethod
-    @RequestWrapper(localName = "submitDataInt", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.SubmitDataInt")
-    @ResponseWrapper(localName = "submitDataIntResponse", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.SubmitDataIntResponse")
+    @RequestWrapper(localName = "submitDataInt", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.DataService.SubmitDataInt")
+    @ResponseWrapper(localName = "submitDataIntResponse", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.DataService.SubmitDataIntResponse")
     @Action(input = "http://soap.server.network.judge.dblab.ptit/SoapDataService/submitDataIntRequest", output = "http://soap.server.network.judge.dblab.ptit/SoapDataService/submitDataIntResponse")
     public void submitDataInt(
         @WebParam(name = "studentCode", targetNamespace = "")
@@ -86,8 +86,8 @@ public interface SoapDataService {
      * @param qCode
      */
     @WebMethod
-    @RequestWrapper(localName = "submitDataIntArray", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.SubmitDataIntArray")
-    @ResponseWrapper(localName = "submitDataIntArrayResponse", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.SubmitDataIntArrayResponse")
+    @RequestWrapper(localName = "submitDataIntArray", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.DataService.SubmitDataIntArray")
+    @ResponseWrapper(localName = "submitDataIntArrayResponse", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.DataService.SubmitDataIntArrayResponse")
     @Action(input = "http://soap.server.network.judge.dblab.ptit/SoapDataService/submitDataIntArrayRequest", output = "http://soap.server.network.judge.dblab.ptit/SoapDataService/submitDataIntArrayResponse")
     public void submitDataIntArray(
         @WebParam(name = "studentCode", targetNamespace = "")
@@ -104,8 +104,8 @@ public interface SoapDataService {
      * @param qCode
      */
     @WebMethod
-    @RequestWrapper(localName = "submitDataString", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.SubmitDataString")
-    @ResponseWrapper(localName = "submitDataStringResponse", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.SubmitDataStringResponse")
+    @RequestWrapper(localName = "submitDataString", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.DataService.SubmitDataString")
+    @ResponseWrapper(localName = "submitDataStringResponse", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.DataService.SubmitDataStringResponse")
     @Action(input = "http://soap.server.network.judge.dblab.ptit/SoapDataService/submitDataStringRequest", output = "http://soap.server.network.judge.dblab.ptit/SoapDataService/submitDataStringResponse")
     public void submitDataString(
         @WebParam(name = "studentCode", targetNamespace = "")
@@ -124,8 +124,8 @@ public interface SoapDataService {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getData", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.GetData")
-    @ResponseWrapper(localName = "getDataResponse", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.GetDataResponse")
+    @RequestWrapper(localName = "getData", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.DataService.GetData")
+    @ResponseWrapper(localName = "getDataResponse", targetNamespace = "http://soap.server.network.judge.dblab.ptit/", className = "WS.DataService.GetDataResponse")
     @Action(input = "http://soap.server.network.judge.dblab.ptit/SoapDataService/getDataRequest", output = "http://soap.server.network.judge.dblab.ptit/SoapDataService/getDataResponse")
     public List<Integer> getData(
         @WebParam(name = "studentCode", targetNamespace = "")

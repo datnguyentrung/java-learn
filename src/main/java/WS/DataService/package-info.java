@@ -1,2 +1,2 @@
 @javax.xml.bind.annotation.XmlSchema(namespace = "http://soap.server.network.judge.dblab.ptit/")
-package WS;
+package WS.DataService;

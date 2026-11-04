@@ -1,5 +1,5 @@
 
-package WS;
+package WS.DataService;
 
 import java.net.MalformedURLException;
 import java.net.URL;

@@ -1,5 +1,5 @@
 
-package WS;
+package WS.DataService;
 
 import java.util.ArrayList;
 import java.util.List;
