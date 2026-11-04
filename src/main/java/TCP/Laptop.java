@@ -1,10 +1,8 @@
 package TCP;
 
-import java.io.Serial;
 import java.io.Serializable;
 
 public class Laptop implements Serializable {
-    @Serial
     private static final long serialVersionUID = 20150711L;
 
     int id;

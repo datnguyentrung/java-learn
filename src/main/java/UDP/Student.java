@@ -1,11 +1,9 @@
 package UDP;
 
-import java.io.Serial;
 import java.io.Serializable;
 import java.util.Locale;
 
 public class Student implements Serializable {
-    @Serial
     private static final long serialVersionUID = 20171107;
 
     String id, code, name, email;
